@@ -2,5 +2,12 @@
     'use strict'
     // ///
 
-    console.log('main.js loaded');
+    paper.install(windows);
+    paper.setup(document.getElementById('mainCanvas'));
+
+    //TODO
+
+    paper.view.draw();
+
+
 })
