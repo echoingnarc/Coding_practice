@@ -1,42 +1,31 @@
-const sam1 = {
-    name: 'Sam', 
-    age: 4,
-};
+let funds = 50;
 
-const sam2 = {
-    name: 'Sam', age: 4
-};
+while(funds > 0 && funds < 100){
+    funds = funds + 2;
+    
+    funds = funds - 1;
+    console.log(funds);
+}
 
-const sam3 = {
-    name: 'Sam',
-    classification: {
-        //property values can 
-        kingdom:'Anamalia',
-        //be objects themselves
-        phylum: 'Chordata',
-        class: 'Mamalia',
-        order: 'Carnivoria',
-        family: 'Felidae',
-        subfamily: 'Felinae',
-        genus: 'Felis',
+//returns a random integar in the range [m, n] inclusive 
+function rand(m,n){
+    return m + Math.floor((n-m+1))*Math.random();
+}
 
-    },
-};
+//randomly returns a string representing one of the six
+//Crown and Anchor faces
 
-sam3.classification.family;
-sam3["classification"].family;
-sam3.classification["family"];
-sam3["classifcation"]["family"];s
+function randFace() {
+    return ["crown", "anchor", "heart", "spade", "club", "diamond"]
+    [rand(0,5)];
+}
 
-sam3.speak = function() {
-    return "Meow!";
-};
-
-sam3.speak();
-
-delete sam3.classifcation;
-delete sam3.speak;
-
-const s = 'hello';
-s.toUpperCase();
-
+const bets = {crown: 0, anchor: 0, heart: 0, spade: 0, club: 0, diamond: 0}:
+let totalBet = rand(1, funds);
+if(totalBet === 7){
+    totalBet = funds;
+    bets.heart = totalBet;
+} else {
+/// distribute total bet
+}
+funds = funds - totalBet;
